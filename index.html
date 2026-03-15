@@ -5,24 +5,9 @@
 <head>
 
     <title>Zoljargal Enkhbayar | QA Portfolio</title>
-    <div style="margin-top:20px;">
-    
-        <img src="images/profile.jpg" style="width:140px;
-         border-radius:50%;
-         border:4px solid #38bdf8;
-         margin-bottom:15px;">
-    
-        <p style="opacity:0.8; max-width:600px; margin:auto;">
-    
-            Computer Science student focused on Quality Assurance, test automation,
-            and API testing. I enjoy building reliable testing frameworks,
-            designing structured test cases, and improving software quality.
-    
-        </p>
-    
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    
+
     <script>
         (function () {
             emailjs.init("DMVn9_1XoFICtZKDY");
@@ -39,7 +24,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0f172a;
+            background: #000;
             color: white;
         }
 
@@ -47,7 +32,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: #020617;
+            background: #0b0b0b;
             padding: 15px;
             text-align: center;
             z-index: 1000;
@@ -62,8 +47,17 @@
 
         header {
             text-align: center;
-            padding: 120px 20px 60px 20px;
-            background: #020617;
+            padding: 140px 20px 80px 20px;
+            background: #000;
+        }
+
+        header img {
+            display: block;
+            margin: auto;
+            width: 140px;
+            border-radius: 50%;
+            border: 4px solid #d4af37;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -72,7 +66,8 @@
         }
 
         section {
-            padding: 60px 10%;
+            padding: 80px 10%;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .projects {
@@ -81,25 +76,25 @@
             gap: 25px;
         }
 
-        .card{
-            background:#1e293b;
-            padding:25px;
-            border-radius:10px;
-            transition:all .3s ease;
-            box-shadow:0 10px 20px rgba(0,0,0,0.3);
+        .card {
+            background: #111;
+            padding: 25px;
+            border-radius: 10px;
+            transition: all .3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
 
-        .card:hover{
-            transform:translateY(-8px);
-            box-shadow:0 25px 50px rgba(0,0,0,0.5);
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
         }
 
-        .card img{
-            width:100%;
-            height:200px;
-            object-fit:cover;
-            border-radius:8px;
-            margin-bottom:15px;
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
         .skills {
@@ -109,20 +104,21 @@
         }
 
         .skill {
-            background: #1e293b;
+            background: #111;
             padding: 10px 15px;
             border-radius: 6px;
+            border: 1px solid #d4af37;
         }
 
         a {
-            color: #38bdf8;
+            color: #d4af37;
             text-decoration: none;
         }
 
         button {
             padding: 12px 20px;
             border: none;
-            background: #38bdf8;
+            background: #d4af37;
             color: black;
             font-weight: bold;
             border-radius: 6px;
@@ -141,12 +137,8 @@
         footer {
             text-align: center;
             padding: 30px;
-            background: #020617;
+            background: #0b0b0b;
             margin-top: 40px;
-        }
-        section{
-            padding:80px 10%;
-            border-top:1px solid rgba(255,255,255,0.05);
         }
     </style>
 
@@ -163,12 +155,15 @@
 
     <header>
 
+        <img src="images/profile.jpg">
+
         <h1>Zoljargal Enkhbayar</h1>
 
-        <p id="typing"></p>
-        <p style="opacity:0.8; margin-top:10px;">
-            Quality Assurance Engineer focused on Automation Testing, Manual Testing,
-            and API Validation
+        <p>QA Engineer</p>
+
+        <p style="opacity:0.8;">
+            Quality Assurance Engineer focused on Automation Testing,
+            Manual Testing, and API Validation
         </p>
 
         <p>
@@ -190,27 +185,15 @@
 
         <p>
 
-            <p>
-            
-                <p>
-                
-                    I am a Computer Science student at Saint Cloud State University graduating in May 2026 with a strong interest in
-                    Quality Assurance and software reliability.
-                
-                    My experience includes manual testing, automated UI testing with Playwright, and REST API validation. I enjoy
-                    designing structured test cases, identifying defects, and building automated testing frameworks that help ensure
-                    applications behave reliably and meet quality standards.
-                
-                    Through my projects, I have worked on real testing workflows including test planning, exploratory testing, bug
-                    reporting, and automation using modern QA tools. I focus on improving software quality by combining systematic
-                    testing practices with automation.
-                
-                    I am currently seeking opportunities where I can contribute to QA teams, continue developing my automation skills,
-                    and help deliver high-quality software products.
-                
-                </p>
-            
-            </p>
+            I am a Computer Science student at Saint Cloud State University graduating in May 2026 with a strong
+            interest in Quality Assurance and software reliability.
+
+            My experience includes manual testing, automated UI testing with Playwright, and REST API validation. I
+            enjoy designing structured test cases, identifying defects, and building automated testing frameworks that
+            help ensure applications behave reliably and meet quality standards.
+
+            Through my projects, I have worked on real testing workflows including test planning, exploratory testing,
+            bug reporting, and automation using modern QA tools.
 
         </p>
 
@@ -229,16 +212,10 @@
                 <h3>Manual Testing – SauceDemo</h3>
 
                 <p>
-
                     Manual QA testing project including test plan,
                     test cases, bug reports, exploratory testing,
                     and application screenshots.
-
                 </p>
-                <p style="margin-top:10px; opacity:0.7;">
-                    Tech: Manual Testing • Test Cases • Bug Reports
-                </p>
-                
 
                 <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">
                     View Project →
@@ -253,13 +230,8 @@
                 <h3>Playwright Automation Framework</h3>
 
                 <p>
-
                     End-to-end UI automation testing using Playwright
                     with Page Object Model architecture and CI pipeline.
-
-                </p>
-                <p style="margin-top:10px; opacity:0.7;">
-                    Tech: Playwright • TypeScript • CI/CD
                 </p>
 
                 <a href="https://github.com/Sunnyzoloo/playwright-e2e-saucedemo">
@@ -275,13 +247,8 @@
                 <h3>API Testing Automation</h3>
 
                 <p>
-
                     REST API testing using Playwright validating HTTP
                     responses, JSON payloads, and negative test scenarios.
-
-                </p>
-                <p style="margin-top:10px; opacity:0.7;">
-                    Tech: Playwright • REST API • JSON Validation
                 </p>
 
                 <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">
@@ -315,25 +282,25 @@
     </section>
 
     <section id="contact">
-    
+
         <h2>Contact Me</h2>
-    
+
         <form id="contact-form">
-    
+
             <input type="text" name="name" placeholder="Your Name" required>
-    
+
             <input type="email" name="email" placeholder="Your Email" required>
-    
+
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    
+
             <br><br>
-    
+
             <button type="submit">Send Message</button>
-    
+
         </form>
-    
+
         <p id="status"></p>
-    
+
     </section>
 
     <footer>
@@ -344,42 +311,6 @@
 
     <script>
 
-        const text = [
-            "QA Engineer",
-            "Automation Testing",
-            "Manual Testing",
-            "API Testing"
-        ];
-
-        let count = 0;
-        let index = 0;
-        let currentText = "";
-        let letter = "";
-
-        (function type() {
-
-            if (count === text.length) {
-                count = 0;
-            }
-
-            currentText = text[count];
-            letter = currentText.slice(0, ++index);
-
-            document.getElementById("typing").textContent = letter;
-
-            if (letter.length === currentText.length) {
-                count++;
-                index = 0;
-                setTimeout(type, 1000);
-            } else {
-                setTimeout(type, 80);
-            }
-
-        })();
-
-    </script>
-    <script>
-
         const form = document.getElementById("contact-form");
 
         form.addEventListener("submit", function (event) {
@@ -388,7 +319,7 @@
 
             emailjs.sendForm(
                 "service_315rbxh",
-                "template_tm2nivm",
+                "template_712btjp",
                 this,
                 "DMVn9_1XoFICtZKDY"
             )
