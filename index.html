@@ -5,6 +5,13 @@
 <head>
 
     <title>Zoljargal Enkhbayar | QA Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
+    <script>
+        (function () {
+            emailjs.init("DMVn9_1XoFICtZKDY");
+        })();
+    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -174,7 +181,7 @@
 
             <div class="card">
 
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
+                <img src="images/inventory-page.png">
 
                 <h3>Manual Testing – SauceDemo</h3>
 
@@ -194,7 +201,7 @@
 
             <div class="card">
 
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+                <img src="images/playwright-tests.png">
 
                 <h3>Playwright Automation Framework</h3>
 
@@ -213,7 +220,7 @@
 
             <div class="card">
 
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+                <img src="images/api-testing.png">
 
                 <h3>API Testing Automation</h3>
 
@@ -255,23 +262,25 @@
     </section>
 
     <section id="contact">
-
+    
         <h2>Contact Me</h2>
-
-        <form action="https://formspree.io/f/yourID" method="POST">
-
+    
+        <form id="contact-form">
+    
             <input type="text" name="name" placeholder="Your Name" required>
-
+    
             <input type="email" name="email" placeholder="Your Email" required>
-
+    
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-            <br>
-
+    
+            <br><br>
+    
             <button type="submit">Send Message</button>
-
+    
         </form>
-
+    
+        <p id="status"></p>
+    
     </section>
 
     <footer>
@@ -314,6 +323,36 @@
             }
 
         })();
+
+    </script>
+    <script>
+
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            emailjs.sendForm(
+                "service_315rbxh",
+                "template_0lyk9bj",
+                this
+            )
+                .then(function () {
+
+                    document.getElementById("status").innerText =
+                        "Message sent successfully!";
+
+                    form.reset();
+
+                }, function (error) {
+
+                    document.getElementById("status").innerText =
+                        "Failed to send message.";
+
+                });
+
+        });
 
     </script>
 
