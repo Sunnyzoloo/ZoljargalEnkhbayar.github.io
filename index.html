@@ -1,21 +1,45 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
 
     <title>Zoljargal Enkhbayar | QA Portfolio</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial;
             margin: 0;
+            font-family: Arial, sans-serif;
             background: #0f172a;
             color: white;
         }
 
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         header {
             text-align: center;
-            padding: 80px 20px;
+            padding: 120px 20px 60px 20px;
             background: #020617;
         }
 
@@ -25,7 +49,7 @@
         }
 
         section {
-            padding: 50px 10%;
+            padding: 60px 10%;
         }
 
         .projects {
@@ -38,6 +62,11 @@
             background: #1e293b;
             padding: 25px;
             border-radius: 10px;
+            transition: transform .2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
         }
 
         .card img {
@@ -46,21 +75,21 @@
             margin-bottom: 15px;
         }
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
 
         .skill {
             background: #1e293b;
-            padding: 10px 14px;
+            padding: 10px 15px;
             border-radius: 6px;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
         }
 
         button {
@@ -73,16 +102,33 @@
             cursor: pointer;
         }
 
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
             background: #020617;
+            margin-top: 40px;
         }
     </style>
 
 </head>
 
 <body>
+
+    <nav>
+
+        <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#skills">Skills</a> <a
+            href="#contact">Contact</a>
+
+    </nav>
 
     <header>
 
@@ -103,21 +149,24 @@
 
     </header>
 
-
-    <section>
+    <section id="about">
 
         <h2>About Me</h2>
 
         <p>
+
             Computer Science student at Saint Cloud State University graduating May 2026.
-            Interested in Quality Assurance, Test Automation, and API testing.
-            Passionate about improving software quality through structured testing and automation.
+
+            I am passionate about improving software quality through manual testing,
+            test automation, and API validation. I enjoy building testing frameworks,
+            writing structured test cases, and identifying defects to improve user
+            experience and system reliability.
+
         </p>
 
     </section>
 
-
-    <section>
+    <section id="projects">
 
         <h2>Projects</h2>
 
@@ -130,8 +179,11 @@
                 <h3>Manual Testing – SauceDemo</h3>
 
                 <p>
-                    Manual testing project including test plan, test cases,
-                    bug reports, exploratory testing, and screenshots.
+
+                    Manual QA testing project including test plan,
+                    test cases, bug reports, exploratory testing,
+                    and application screenshots.
+
                 </p>
 
                 <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">
@@ -140,7 +192,6 @@
 
             </div>
 
-
             <div class="card">
 
                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
@@ -148,8 +199,10 @@
                 <h3>Playwright Automation Framework</h3>
 
                 <p>
-                    End-to-end UI automation using Playwright with Page Object Model
-                    and CI pipeline integration.
+
+                    End-to-end UI automation testing using Playwright
+                    with Page Object Model architecture and CI pipeline.
+
                 </p>
 
                 <a href="https://github.com/Sunnyzoloo/playwright-e2e-saucedemo">
@@ -158,7 +211,6 @@
 
             </div>
 
-
             <div class="card">
 
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
@@ -166,8 +218,10 @@
                 <h3>API Testing Automation</h3>
 
                 <p>
-                    REST API testing validating endpoints, HTTP responses,
-                    and JSON structures.
+
+                    REST API testing using Playwright validating HTTP
+                    responses, JSON payloads, and negative test scenarios.
+
                 </p>
 
                 <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">
@@ -180,8 +234,7 @@
 
     </section>
 
-
-    <section>
+    <section id="skills">
 
         <h2>Skills</h2>
 
@@ -201,13 +254,31 @@
 
     </section>
 
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form action="https://formspree.io/f/yourID" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <br>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </section>
 
     <footer>
 
         <p>© 2026 Zoljargal Enkhbayar</p>
 
     </footer>
-
 
     <script>
 
