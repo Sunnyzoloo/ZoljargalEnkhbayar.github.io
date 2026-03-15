@@ -338,7 +338,8 @@
             emailjs.sendForm(
                 "service_315rbxh",
                 "template_712btjp",
-                this
+                this,
+                "DMVn9_1XoFICtZKDY"
             )
                 .then(function () {
 
@@ -348,6 +349,8 @@
                     form.reset();
 
                 }, function (error) {
+
+                    console.log("EmailJS error:", error);
 
                     document.getElementById("status").innerText =
                         "Failed to send message.";
