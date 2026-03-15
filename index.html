@@ -2,124 +2,194 @@
 <html>
 
 <head>
-    <title>Zoljargal Enkhbayar - QA Portfolio</title>
+    <title>Zoljargal Enkhbayar | QA Portfolio</title>
+
     <style>
         body {
-            font-family: Arial;
-            margin: 40px;
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #020617;
         }
 
         h1 {
-            color: #333;
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
-        .section {
-            margin-top: 40px;
+        section {
+            padding: 40px 10%;
         }
 
-        .project {
-            background: white;
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
             padding: 20px;
-            margin-top: 10px;
-            border-radius: 8px;
+            border-radius: 10px;
+            transition: transform .2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
         }
 
         a {
-            color: #0366d6;
+            color: #38bdf8;
             text-decoration: none;
         }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+        }
     </style>
+
 </head>
 
 <body>
 
-    <h1>Zoljargal Enkhbayar</h1>
+    <header>
 
-    <p>
-        QA Engineer | Manual Testing | Automation Testing | API Testing
-    </p>
+        <h1>Zoljargal Enkhbayar</h1>
 
-    <div class="section">
+        <p>QA Engineer | Manual Testing | Automation Testing | API Testing</p>
+
+        <p>
+            <a href="https://github.com/Sunnyzoloo">GitHub</a> |
+            <a href="https://linkedin.com/in/zoljargal-enkhbayar">LinkedIn</a>
+        </p>
+
+    </header>
+
+
+    <section>
+
         <h2>About Me</h2>
 
         <p>
             Computer Science student at Saint Cloud State University graduating May 2026.
             Passionate about improving software quality through manual testing,
-            test automation, and API validation.
+            automation testing, and API validation.
         </p>
 
-    </div>
+    </section>
 
-    <div class="section">
+
+    <section>
 
         <h2>Projects</h2>
 
-        <div class="project">
-            <h3>Manual Testing – SauceDemo</h3>
+        <div class="projects">
 
-            <p>
-                Manual QA testing project demonstrating test planning,
-                test cases, bug reporting, and exploratory testing.
-            </p>
+            <div class="card">
 
-            <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">
-                View Project
-            </a>
+                <h3>Manual Testing – SauceDemo</h3>
+
+                <p>
+                    Manual QA testing project including test plan, test cases,
+                    bug reports, and exploratory testing.
+                </p>
+
+                <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">
+                    View Project →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Playwright Automation Framework</h3>
+
+                <p>
+                    End-to-end UI automation testing using Playwright with
+                    Page Object Model and CI pipeline.
+                </p>
+
+                <a href="https://github.com/Sunnyzoloo/playwright-e2e-saucedemo">
+                    View Project →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>API Testing Automation</h3>
+
+                <p>
+                    REST API testing using Playwright validating HTTP responses
+                    and JSON structures.
+                </p>
+
+                <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">
+                    View Project →
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="project">
-            <h3>Playwright Automation Framework</h3>
+    </section>
 
-            <p>
-                End-to-end UI automation testing using Playwright and TypeScript.
-            </p>
 
-            <a href="https://github.com/Sunnyzoloo/playwright-e2e-saucedemo">
-                View Project
-            </a>
-
-        </div>
-
-        <div class="project">
-            <h3>API Testing Automation</h3>
-
-            <p>
-                REST API testing using Playwright with response validation and
-                negative testing scenarios.
-            </p>
-
-            <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">
-                View Project
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="section">
+    <section>
 
         <h2>Skills</h2>
 
-        <p>
-            Manual Testing • Playwright • API Testing • JIRA • Postman • Git • CI/CD
-        </p>
+        <div class="skills">
 
-    </div>
+            <div class="skill">Manual Testing</div>
+            <div class="skill">Playwright</div>
+            <div class="skill">API Testing</div>
+            <div class="skill">Test Case Design</div>
+            <div class="skill">Bug Reporting</div>
+            <div class="skill">JIRA</div>
+            <div class="skill">Postman</div>
+            <div class="skill">Git</div>
+            <div class="skill">CI/CD</div>
 
-    <div class="section">
+        </div>
 
-        <h2>Contact</h2>
+    </section>
 
-        <p>
-            LinkedIn:
-            <a href="https://linkedin.com/in/zoljargal-enkhbayar">
-                linkedin.com/in/zoljargal-enkhbayar
-            </a>
-        </p>
 
-    </div>
+    <section>
+
+        <h2>GitHub Stats</h2>
+
+        <img src="https://github-readme-stats.vercel.app/api?username=Sunnyzoloo&show_icons=true&theme=tokyonight">
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 Zoljargal Enkhbayar</p>
+
+    </footer>
 
 </body>
 
