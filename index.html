@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -7,7 +6,6 @@
     <title>Zoljargal Enkhbayar | QA Portfolio</title>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
     <script>
         (function () {
             emailjs.init("DMVn9_1XoFICtZKDY");
@@ -28,46 +26,71 @@
             color: white;
         }
 
+        /* NAVBAR FIX (spacing + clean) */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #0b0b0b;
-            padding: 15px;
-            text-align: center;
-            z-index: 1000;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(11, 11, 11, 0.8);
+            background: rgba(11, 11, 11, 0.85);
             backdrop-filter: blur(10px);
-            padding: 15px;
-            text-align: center;
+            padding: 15px 0;
             z-index: 1000;
         }
 
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            /* 👈 THIS fixes spacing */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* HEADER */
         header {
             text-align: center;
-            padding: 140px 20px 80px 20px;
-            background: #000;
+            padding: 110px 20px 60px 20px;
         }
 
         header img {
-            display: block;
-            margin: auto;
-            width: 140px;
+            width: 130px;
             border-radius: 50%;
-            border: 4px solid #d4af37;
-            margin-bottom: 20px;
+            border: 3px solid #d4af37;
+            margin-bottom: 10px;
         }
 
         h1 {
             font-size: 42px;
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
+            margin: 10px 0;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        header p {
+            margin: 6px 0;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        header p:nth-of-type(2) {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 10%;
+            max-width: 1100px;
+            margin: auto;
         }
 
         h2 {
@@ -77,18 +100,7 @@
             padding-left: 10px;
         }
 
-        header p {
-            margin: 6px 0;
-            font-size: 16px;
-            color: rgba(255,255,255,0.85);
-        }
-
-        section {
-            padding: 80px 10%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
+        /* PROJECTS */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -99,24 +111,24 @@
             background: #111;
             padding: 25px;
             border-radius: 12px;
-            transition: all .25s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.25s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 15px;
         }
 
+        /* SKILLS */
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -127,47 +139,40 @@
             background: #111;
             padding: 10px 15px;
             border-radius: 20px;
-            border: 1px solid rgba(212,175,55,0.4);
+            border: 1px solid rgba(212, 175, 55, 0.4);
             font-size: 14px;
         }
 
-        a {
-            color: #d4af37;
-            text-decoration: none;
-        }
-
+        /* BUTTON */
         button {
             padding: 12px 20px;
-            border: none;
             background: #d4af37;
+            border: none;
             color: black;
             font-weight: bold;
             border-radius: 6px;
             cursor: pointer;
-            transition: 0.2s ease;
         }
 
         button:hover {
             background: #f1c94a;
         }
 
+        /* FORM */
         input,
         textarea {
             width: 100%;
             padding: 10px;
-            border: none;
             border-radius: 6px;
+            border: none;
             margin-top: 10px;
         }
 
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 30px;
             background: #0b0b0b;
-            margin-top: 40px;
-        }
-        a:hover {
-            opacity: 0.8;
         }
     </style>
 
@@ -176,228 +181,139 @@
 <body>
 
     <nav>
-
-        <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#skills">Skills</a> <a
-            href="#contact">Contact</a>
-
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <header>
-
         <img src="images/profile.jpg">
 
         <h1>Zoljargal Enkhbayar</h1>
 
         <p>QA Engineer | Manual & Automation Testing | Playwright | API Testing</p>
 
-        <p style="opacity:0.8;">
-            Testing real-world applications, building automation frameworks, and developing AI-powered QA tools.
-        </p>
+        <p>Testing real-world applications, building automation frameworks, and developing AI-powered QA tools.</p>
 
         <p>
             <a href="https://github.com/Sunnyzoloo">GitHub</a> |
             <a href="https://linkedin.com/in/zoljargal-enkhbayar">LinkedIn</a>
         </p>
-
-        <br>
-
     </header>
 
     <section id="about">
-
         <h2>About Me</h2>
 
         <p>
-
-            <p>
-                I am a Computer Science student at Saint Cloud State University graduating in May 2026, focused on Quality Assurance
-                and software reliability.
-            
-                I have hands-on experience in manual testing, automation testing with Playwright, and REST API validation. I have
-                tested real-world applications, designed test cases, performed exploratory testing, and documented defects to
-                improve product quality.
-            
-                I also build tools to support QA workflows, including an AI-powered bug analyzer that converts raw bug notes into
-                structured reports and generates test cases.
-            
-                I am passionate about ensuring software quality and continuously improving testing processes through practical,
-                real-world experience.
-            </p>
-
+            Computer Science student at Saint Cloud State University (May 2026) focused on Quality Assurance and
+            software reliability.
+            <br><br>
+            Experienced in manual testing, Playwright automation, and REST API validation, including testing real-world
+            applications, designing test cases, and reporting defects.
+            <br><br>
+            Built an AI-powered QA tool that generates structured bug reports and test cases from raw input.
         </p>
 
     </section>
 
     <section id="projects">
-
         <h2>Projects</h2>
 
         <div class="projects">
+
             <div class="card">
                 <img src="images/ai-bug-analyzer.png">
-            
                 <h3>AI Bug Analyzer</h3>
-            
-                <p>
-                    AI-powered QA tool that converts raw bug notes into structured bug reports and generates test cases to improve
-                    testing efficiency and consistency.
-                </p>
-            
-                <a href="https://ai-bug-analyzer-zoljargal.vercel.app/">
-                    Live Demo →
-                </a>
+                <p>AI-powered QA tool that generates structured bug reports and test cases from raw input.</p>
+                <a href="https://ai-bug-analyzer-zoljargal.vercel.app/">Live Demo →</a>
             </div>
 
             <div class="card">
                 <img src="images/navch.png">
-            
                 <h3>Navch — Real App QA Testing</h3>
-            
-                <p>
-                    Performed manual testing on a real-world Android marketplace application, identifying critical defects including
-                    crashes and payment issues.
-                </p>
-            
-                <a href="https://drive.google.com/file/d/1FD0Itt0vMrSbugOuWEQbUtBCXSO7yjxO/view">
-                    View Report →
-                </a>
-            </div>
-            <div class="card">
-            
-                <img src="images/api-testing.png">
-            
-                <h3>API Testing Automation</h3>
-            
-                <p>
-                    Developed automated API tests to validate REST endpoints, response data, and error handling.
-                </p>
-            
-                <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">
-                    View Project →
-                </a>
-            
+                <p>Performed manual testing on a real-world Android marketplace app, identifying crashes and payment
+                    issues.</p>
+                <a href="https://drive.google.com/file/d/1FD0Itt0vMrSbugOuWEQbUtBCXSO7yjxO/view">View Report →</a>
             </div>
 
             <div class="card">
-
                 <img src="images/playwright-tests.png">
-
-                <h3>Playwright Automation Framework</h3>
-
-                <p>
-                    Built a Playwright automation framework using Page Object Model and CI/CD to validate end-to-end workflows.
-                </p>
-
-                <a href="https://github.com/Sunnyzoloo/playwright-e2e-saucedemo">
-                    View Project →
-                </a>
-
+                <h3>Playwright Automation</h3>
+                <p>Built Playwright automation framework using POM and CI/CD.</p>
+                <a href="https://github.com/Sunnyzoloo/playwright-e2e-saucedemo">View Project →</a>
             </div>
+
             <div class="card">
-            
+                <img src="images/api-testing.png">
+                <h3>API Testing</h3>
+                <p>Automated REST API testing with validation and negative scenarios.</p>
+                <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">View Project →</a>
+            </div>
+
+            <div class="card">
                 <img src="images/inventory-page.png">
-            
-                <h3>Manual Testing – SauceDemo</h3>
-            
-                <p>
-                    Performed manual testing on an e-commerce application, creating test cases, executing exploratory testing, and
-                    documenting defects.
-                </p>
-            
-                <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">
-                    View Project →
-                </a>
-            
+                <h3>Manual Testing</h3>
+                <p>Designed test cases, performed exploratory testing, and reported defects.</p>
+                <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">View Project →</a>
             </div>
 
         </div>
-
     </section>
 
     <section id="skills">
-
         <h2>Skills</h2>
 
         <div class="skills">
-        
-            <div class="skill">🧪 Manual Testing</div>
-            <div class="skill">⚙️ Playwright</div>
-            <div class="skill">🌐 API Testing</div>
-            <div class="skill">🔗 REST APIs</div>
-            <div class="skill">📋 Test Case Design</div>
-            <div class="skill">🐞 Bug Reporting</div>
-            <div class="skill">📊 JIRA</div>
-            <div class="skill">📮 Postman</div>
-            <div class="skill">🔧 Git</div>
-            <div class="skill">🚀 CI/CD</div>
-            <div class="skill">🤖 OpenAI API</div>
-            <div class="skill">🧠 Prompt Engineering</div>
-
-        
+            <div class="skill">Manual Testing</div>
+            <div class="skill">Playwright</div>
+            <div class="skill">API Testing</div>
+            <div class="skill">Test Case Design</div>
+            <div class="skill">Bug Reporting</div>
+            <div class="skill">JIRA</div>
+            <div class="skill">Postman</div>
+            <div class="skill">Git</div>
+            <div class="skill">CI/CD</div>
+            <div class="skill">OpenAI API</div>
         </div>
 
     </section>
 
     <section id="contact">
-
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
 
         <form id="contact-form">
-
             <input type="text" name="name" placeholder="Your Name" required>
-
             <input type="email" name="email" placeholder="Your Email" required>
-
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
             <br><br>
-
             <button type="submit">Send Message</button>
-
         </form>
 
         <p id="status"></p>
-
     </section>
 
     <footer>
-
         <p>© 2026 Zoljargal Enkhbayar</p>
-
     </footer>
 
     <script>
-
         const form = document.getElementById("contact-form");
 
         form.addEventListener("submit", function (event) {
-
             event.preventDefault();
 
-            emailjs.sendForm(
-                "service_315rbxh",
-                "template_712btjp",
-                this,
-                "DMVn9_1XoFICtZKDY"
-            )
-                .then(function () {
-
-                    document.getElementById("status").innerText =
-                        "Message sent successfully!";
-
+            emailjs.sendForm("service_315rbxh", "template_712btjp", this, "DMVn9_1XoFICtZKDY")
+                .then(() => {
+                    document.getElementById("status").innerText = "Message sent!";
                     form.reset();
-
-                }, function (error) {
-
-                    console.log("EmailJS error:", error);
-
-                    document.getElementById("status").innerText =
-                        "Failed to send message.";
-
+                })
+                .catch(() => {
+                    document.getElementById("status").innerText = "Failed to send.";
                 });
-
         });
-
     </script>
 
 </body>
