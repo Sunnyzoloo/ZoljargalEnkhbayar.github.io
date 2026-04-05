@@ -38,11 +38,15 @@
             z-index: 1000;
         }
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 11, 11, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
         }
 
         header {
@@ -62,12 +66,27 @@
 
         h1 {
             font-size: 42px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            border-left: 4px solid #d4af37;
+            padding-left: 10px;
+        }
+
+        header p {
+            margin: 6px 0;
+            font-size: 16px;
+            color: rgba(255,255,255,0.85);
         }
 
         section {
             padding: 80px 10%;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 1100px;
+            margin: auto;
         }
 
         .projects {
@@ -79,14 +98,15 @@
         .card {
             background: #111;
             padding: 25px;
-            border-radius: 10px;
-            transition: all .3s ease;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            transition: all .25s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
 
         .card img {
@@ -106,8 +126,9 @@
         .skill {
             background: #111;
             padding: 10px 15px;
-            border-radius: 6px;
-            border: 1px solid #d4af37;
+            border-radius: 20px;
+            border: 1px solid rgba(212,175,55,0.4);
+            font-size: 14px;
         }
 
         a {
@@ -123,6 +144,11 @@
             font-weight: bold;
             border-radius: 6px;
             cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        button:hover {
+            background: #f1c94a;
         }
 
         input,
@@ -139,6 +165,9 @@
             padding: 30px;
             background: #0b0b0b;
             margin-top: 40px;
+        }
+        a:hover {
+            opacity: 0.8;
         }
     </style>
 
@@ -159,11 +188,10 @@
 
         <h1>Zoljargal Enkhbayar</h1>
 
-        <p>QA Engineer</p>
+        <p>QA Engineer | Manual & Automation Testing | Playwright | API Testing</p>
 
         <p style="opacity:0.8;">
-            Quality Assurance Engineer focused on Automation Testing,
-            Manual Testing, and API Validation
+            Testing real-world applications, building automation frameworks, and developing AI-powered QA tools.
         </p>
 
         <p>
@@ -181,15 +209,20 @@
 
         <p>
 
-            I am a Computer Science student at Saint Cloud State University graduating in May 2026 with a strong
-            interest in Quality Assurance and software reliability.
-
-            My experience includes manual testing, automated UI testing with Playwright, and REST API validation. I
-            enjoy designing structured test cases, identifying defects, and building automated testing frameworks that
-            help ensure applications behave reliably and meet quality standards.
-
-            Through my projects, I have worked on real testing workflows including test planning, exploratory testing,
-            bug reporting, and automation using modern QA tools.
+            <p>
+                I am a Computer Science student at Saint Cloud State University graduating in May 2026, focused on Quality Assurance
+                and software reliability.
+            
+                I have hands-on experience in manual testing, automation testing with Playwright, and REST API validation. I have
+                tested real-world applications, designed test cases, performed exploratory testing, and documented defects to
+                improve product quality.
+            
+                I also build tools to support QA workflows, including an AI-powered bug analyzer that converts raw bug notes into
+                structured reports and generates test cases.
+            
+                I am passionate about ensuring software quality and continuously improving testing processes through practical,
+                real-world experience.
+            </p>
 
         </p>
 
@@ -200,23 +233,49 @@
         <h2>Projects</h2>
 
         <div class="projects">
+            <div class="card">
+                <img src="images/ai-bug-analyzer.png">
+            
+                <h3>AI Bug Analyzer</h3>
+            
+                <p>
+                    AI-powered QA tool that converts raw bug notes into structured bug reports and generates test cases to improve
+                    testing efficiency and consistency.
+                </p>
+            
+                <a href="https://ai-bug-analyzer-zoljargal.vercel.app/">
+                    Live Demo →
+                </a>
+            </div>
 
             <div class="card">
-
-                <img src="images/inventory-page.png">
-
-                <h3>Manual Testing – SauceDemo</h3>
-
+                <img src="images/navch.png">
+            
+                <h3>Navch — Real App QA Testing</h3>
+            
                 <p>
-                    Manual QA testing project including test plan,
-                    test cases, bug reports, exploratory testing,
-                    and application screenshots.
+                    Performed manual testing on a real-world Android marketplace application, identifying critical defects including
+                    crashes and payment issues.
                 </p>
-
-                <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">
+            
+                <a href="https://drive.google.com/file/d/1FD0Itt0vMrSbugOuWEQbUtBCXSO7yjxO/view">
+                    View Report →
+                </a>
+            </div>
+            <div class="card">
+            
+                <img src="images/api-testing.png">
+            
+                <h3>API Testing Automation</h3>
+            
+                <p>
+                    Developed automated API tests to validate REST endpoints, response data, and error handling.
+                </p>
+            
+                <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">
                     View Project →
                 </a>
-
+            
             </div>
 
             <div class="card">
@@ -226,8 +285,7 @@
                 <h3>Playwright Automation Framework</h3>
 
                 <p>
-                    End-to-end UI automation testing using Playwright
-                    with Page Object Model architecture and CI pipeline.
+                    Built a Playwright automation framework using Page Object Model and CI/CD to validate end-to-end workflows.
                 </p>
 
                 <a href="https://github.com/Sunnyzoloo/playwright-e2e-saucedemo">
@@ -235,22 +293,21 @@
                 </a>
 
             </div>
-
             <div class="card">
-
-                <img src="images/api-testing.png">
-
-                <h3>API Testing Automation</h3>
-
+            
+                <img src="images/inventory-page.png">
+            
+                <h3>Manual Testing – SauceDemo</h3>
+            
                 <p>
-                    REST API testing using Playwright validating HTTP
-                    responses, JSON payloads, and negative test scenarios.
+                    Performed manual testing on an e-commerce application, creating test cases, executing exploratory testing, and
+                    documenting defects.
                 </p>
-
-                <a href="https://github.com/Sunnyzoloo/playwright-api-testing-fakestore">
+            
+                <a href="https://github.com/Sunnyzoloo/manual-testing-saucedemo">
                     View Project →
                 </a>
-
+            
             </div>
 
         </div>
@@ -273,6 +330,8 @@
             <div class="skill">📮 Postman</div>
             <div class="skill">🔧 Git</div>
             <div class="skill">🚀 CI/CD</div>
+            <div class="skill">🤖 OpenAI API</div>
+            <div class="skill">🧠 Prompt Engineering</div>
 
         
         </div>
